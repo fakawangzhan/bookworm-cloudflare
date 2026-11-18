@@ -1,0 +1,27 @@
+.environment-shell { min-height: 100dvh; padding: clamp(20px, 5vw, 64px) 20px; background: var(--bg, #f5f7fb); }
+.environment-card { width: min(960px, 100%); margin: 0 auto; padding: clamp(20px, 4vw, 40px); border-radius: 20px; }
+.environment-card h1 { font-size: clamp(23px, 4vw, 32px); margin: 12px 0; }
+.environment-card > p, .environment-help { color: #64748b; line-height: 1.7; }
+.environment-checks { padding: 0; margin: 28px 0; list-style: none; display: grid; gap: 12px; }
+.environment-checks li { display: flex; align-items: center; gap: 14px; border: 1px solid #e5eaf2; padding: 16px; border-radius: 12px; }
+.environment-checks li > div { flex: 1; min-width: 0; }
+.environment-checks p { margin: 5px 0 0; color: #64748b; font-size: 13px; line-height: 1.6; }
+.environment-checks small { white-space: nowrap; color: #64748b; }
+.environment-indicator { display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0; background: #eef2ff; color: #5366cb; border-radius: 50%; }
+.environment-checks [data-status=passed] .environment-indicator { background: #e4f6ee; color: #168159; }
+.environment-checks [data-status=failed] .environment-indicator { background: #fff0ed; color: #bc463b; }
+.environment-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.environment-details { margin: 18px 0; font-size: 13px; }
+.environment-details summary { cursor: pointer; padding: 12px 0; font-weight: 600; }
+.environment-table-wrap { overflow-x: auto; }
+.environment-details table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; text-align: left; }
+.environment-details th, .environment-details td { padding: 12px; border-bottom: 1px solid #e5eaf2; min-width: 90px; overflow-wrap: anywhere; }
+.environment-details th { background: #f6f8fc; }
+.environment-details small { display: block; color: #64748b; margin-top: 5px; }
+.environment-details p { color: #64748b; line-height: 1.6; }
+.environment-repair { max-width: 1280px; margin: 24px auto; }
+.environment-summary { padding: 14px 20px; margin: 0 0 20px; border: 1px solid #dceee5; border-radius: 12px; background: #f6fcf8; color: #267353; }
+.environment-summary .environment-details { color: #374151; margin-bottom: 0; }
+.wf-start-guide { margin-bottom: 20px; }
+.wf-start-guide p { line-height: 1.8; color: #64748b; }
+@media (max-width: 600px) { .environment-shell { padding: 16px 10px; } .environment-checks li { gap: 9px; padding: 12px 10px; } .environment-checks li > small { display: none; } .environment-details td { padding: 10px 8px; } }

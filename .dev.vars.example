@@ -1,0 +1,16 @@
+# 可留空：部署后由系统管理员在网页中添加并验证 AI 档案。
+# 仅服务端读取本文件；不要添加 VITE_ 前缀，也不要提交 .dev.vars。
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-chat
+DEEPSEEK_API_KEY=
+
+# 本地开发可自行生成；云端首次部署自动生成，后续保留。
+# 从备份恢复时必须填写备份中的原值。
+TASK_CREDENTIAL_KEY=
+
+# 可选托管档案，四项成组填写。按实际服务商调整地址和模型。
+# LOCAL_AI_NEWAPI_ENDPOINT=https://your-provider.example/v1
+# LOCAL_AI_NEWAPI_MODEL=your-model
+# LOCAL_AI_NEWAPI_KEY=
+# LOCAL_AI_NEWAPI_VERIFIED=0
+# 还支持前缀 LOCAL_AI_JIZHI / LOCAL_AI_COSPLAY / LOCAL_AI_GPT6_ASTRA。

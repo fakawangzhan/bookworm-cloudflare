@@ -1,0 +1,33 @@
+{
+  "name": "bookworm-cloudflare",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BookWorm AI 网文创作工作台 · Cloudflare Workers + D1 + Workflows",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0 <23 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "npm run build && node scripts/cloudflare-cli.mjs dev --local --port 8787",
+    "dev:web": "vite --host 127.0.0.1",
+    "build": "vite build && node scripts/build-cloudflare-source.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node scripts/check-source.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "db:init:local": "node scripts/cloudflare-cli.mjs d1 migrations apply DB --local",
+    "db:migrate": "node scripts/cloudflare-cli.mjs d1 migrations apply DB --remote",
+    "secrets:sync": "node scripts/sync-cloudflare-ai.mjs",
+    "deploy:dry": "npm run build && node scripts/cloudflare-cli.mjs deploy --dry-run",
+    "deploy": "node scripts/deploy-cloudflare.mjs",
+    "cf": "node scripts/cloudflare-cli.mjs"
+  },
+  "devDependencies": {
+    "vite": "8.2.2",
+    "wrangler": "4.130.0"
+  },
+  "dependencies": {
+    "docx": "9.7.1",
+    "fflate": "0.8.3",
+    "idb-keyval": "6.3.0"
+  }
+}

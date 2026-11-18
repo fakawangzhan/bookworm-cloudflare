@@ -1,0 +1,42 @@
+.account-list { min-width: 0; width: 100%; border-top: 1px solid var(--mobile-line, #e1e9e5); }
+.account-list-head, .account-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(110px, .8fr) minmax(180px, 1fr) 76px; align-items: center; gap: 20px; }
+.account-list-head { padding: 12px 8px; color: var(--mobile-muted, #71877c); font-size: 12px; background: var(--mobile-accent-soft, #f6f9f7); }
+.account-row { padding: 20px 8px; border-bottom: 1px solid var(--mobile-line, #e1e9e5); color: var(--mobile-ink, #344e41); }
+.account-row:last-child { border-bottom: 0; }
+.account-row > div { min-width: 0; }
+.account-identity, .account-group, .account-roles { display: grid; justify-items: start; gap: 8px; }
+.account-identity strong { font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+.account-username { font-size: 12px; line-height: 1.6; color: var(--mobile-muted, #71877c); overflow-wrap: anywhere; max-width: 100%; }
+.account-group { font-size: 13px; }
+.account-status, .account-current, .account-role-labels span { font-size: 12px; line-height: 1.5; padding: 3px 8px; border-radius: 6px; background: var(--mobile-accent-soft, #edf6f0); color: var(--mobile-strong, #356e50); }
+.account-status.is-disabled { background: #f6eded; color: #9c4b48; }
+.account-role-labels { display: flex; flex-wrap: wrap; gap: 5px; max-width: 100%; }
+.account-roles label { display: grid; gap: 5px; margin: 0; width: 100%; min-width: 0; }
+.account-control-label { color: var(--mobile-muted, #71877c); font-size: 12px; }
+.account-roles .native-select { display: block; width: 100%; min-width: 0; max-width: 100%; min-height: 40px; padding: 8px 10px; font: inherit; font-size: 13px; color: var(--mobile-ink, #344e41); background: var(--mobile-card, #fff); border: 1px solid var(--mobile-line, #ceddd3); border-radius: 8px; }
+.account-roles select:focus-visible, .account-actions button:focus-visible { outline: 2px solid var(--mobile-strong, #378060); outline-offset: 2px; }
+.account-actions .button { width: 100%; margin: 0; }
+@media (max-width: 1100px) {
+  .account-list-head { display: none; }
+  .account-row { grid-template-columns: minmax(0, 1fr) minmax(160px, 1fr); gap: 16px; align-items: start; }
+  .account-identity { grid-column: 1; grid-row: 1; }
+  .account-group { grid-column: 1; grid-row: 2; }
+  .account-roles { grid-column: 2; grid-row: 1; }
+  .account-actions { grid-column: 2; grid-row: 2; justify-self: end; min-width: 76px; }
+}
+@media (max-width: 560px) {
+  .account-row { grid-template-columns: minmax(0, 1fr); padding: 20px 0; gap: 12px; }
+  .account-row > div { grid-column: 1; grid-row: auto; width: 100%; }
+  .account-group { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .account-actions { justify-self: stretch; }
+  .account-actions .button { min-height: 44px; }
+}
+
+.account-create-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 20px; margin-top:16px; }
+.account-create-grid label { display:flex; flex-direction:column; align-items:stretch; gap:7px; font-size:13px; color:#2b4250; }
+.account-create-grid label .wf-required { display:inline; }
+.account-create-grid input,.account-create-grid select { box-sizing:border-box; width:100%; min-width:0; min-height:42px; padding:10px 12px; border:1px solid #cddce2; border-radius:7px; background:#fff; color:inherit; font:inherit; }
+.account-create-grid small { color:#637782; line-height:1.6; font-weight:400; }
+.account-create-grid input:focus-visible,.account-create-grid select:focus-visible { outline:2px solid var(--teal); outline-offset:2px; }
+.account-create [hidden] { display:none; }
+@media (max-width:700px) { .account-create-grid { grid-template-columns:minmax(0,1fr); } }

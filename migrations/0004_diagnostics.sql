@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS bw_service_logs (id TEXT PRIMARY KEY,owner_id TEXT NOT NULL,value TEXT NOT NULL,created_at TEXT NOT NULL);
